@@ -1,0 +1,9 @@
+rust:
+  build:
+    base: [ rust@1 ]
+    build:
+      - cargo b
+    deploy: [ target/debug/~probe ]
+    cache: [ target ]
+  run:
+    start: ./probe
