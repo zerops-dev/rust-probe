@@ -4,6 +4,15 @@ rust:
     build:
       - cargo b
     deploy: [ target/debug/~probe ]
+  run:
+    start: ./probe
+
+cache:
+  build:
+    base: [ rust@1 ]
+    build:
+      - cargo b
+    deploy: [ target/debug/~probe ]
     cache: [ target ]
   run:
     start: ./probe
